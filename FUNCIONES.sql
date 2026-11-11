@@ -143,12 +143,3 @@ DECLARE fechaVencimiento DATE;
 END//
 
 DELIMITER ;
-
-SELECT contarNumPacientes();
-SELECT cantidadProductos("Botes de Crema");
-SELECT comprobarPaciente('48422496C');
-SELECT ingresosPorMes(2025, 2);
-SELECT numPorCompañia('Mapfre');
-SELECT obtnerProxCita('48422496C');
-SELECT pagosPendientes('48422496C');
-SELECT vencimientoAutorizacion('48422496C', '10455698');

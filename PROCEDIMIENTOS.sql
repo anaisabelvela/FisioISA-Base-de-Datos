@@ -143,15 +143,3 @@ END//
 
 
 DELIMITER ;
-
-INSERT IGNORE INTO Paciente (DNI, Nombre, Apellidos)
-VALUES ('BLOQUEO', 'Horario', 'Bloqueado');
-
-CALL eliminarCita(1);
-CALL BloquearHorarioFisioterapeuta('77868358K', '2025-09-20 14:00:05', '2025-09-21 14:00:05');
-CALL actualizarHistorialClinico('48422496C', 'El paciente no asistió a su tercera sesión de terapia manual el 20/02/2025 con el fisioterapeuta Eustaquio Morón Sánchez. Presenta mejoría en movilidad lumbar y reducción de la tensión muscular y el dolor.', 'Disfunción miofascial con restricción articular lumbar de origen postural. Evolución positiva sin signos de lesión aguda.', 'Terapia manual con movilización, liberación miofascial y estiramientos. Se han añadido ejercicios domiciliarios. Se prevé incorporar ejercicios activos en las sesiones restantes.', 'Ha completado 3 de 5 sesiones. Tratamiento abonado progresivamente. Evolución favorable, sin incidencias. Dos sesiones pendientes.', 'Mejora en movilidad, disminución del dolor y rigidez, y mejor postura funcional.', 'Transición hacia ejercicios activos y educación postural. Valoración final en la última sesión.', 'Finalizar las sesiones, continuar con ejercicios en casa, evitar sobreesfuerzos, hidratarse y revisar el entorno laboral si es necesario.');
-CALL citasFisioEntreFechas('48574312H','2025-10-20 12:30:00', '2025-12-21 12:30:00');
-CALL regristrarNuevoPaciente('48422496M', 'Manolo', 'Rodríguez De Luque', '2005-05-13', 'Mapfre', '1234-5678-9013', 'Calle Tajo 12, Puerta 2, 1ºB', '635885437', 'mirl@gmail.com', 'Prueba de Imagen');
-CALL modificarCita('48574312H', 'Traumatologica', '.', '2025-06-20 12:30:00', 2);
-CALL registrarPago(2, 675.00, 45.00, 'Tarjeta', '2025-02-20 14:00:05', 5, '2025-03-20 23:59:59', 'Bono');
-CALL AgendarCita('48574312H', '48422496C', 'Pediatrica', '.', '2025-10-21 12:30:00');
